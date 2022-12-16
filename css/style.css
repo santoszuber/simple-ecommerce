@@ -1,0 +1,237 @@
+body {
+  background-color: #f0e9d2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 99vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-touch-callout: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#welcome-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.welcome-h1 {
+  z-index: 1;
+  color: #181d31;
+  position: relative;
+  animation: welcome-slide;
+  animation-duration: 2s;
+}
+.start-button {
+  z-index: 1;
+  background-color: #678983;
+  position: relative;
+  animation: welcome-slide;
+  animation-duration: 2s;
+  transition: background-color 2s;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 17px;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.start-button:hover {
+  background-color: #a3b9b6;
+}
+.transition {
+  z-index: 0;
+  position: absolute;
+  border-radius: 40px;
+  background-color: #e6ddc4;
+}
+
+#navegation-page {
+  background-color: #e6ddc4;
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 37px;
+}
+#title {
+  font-size: 70px;
+  margin: 0;
+  text-align: center;
+}
+#search-bar {
+  outline: none;
+  border: none;
+  padding: 7px;
+  border-radius: 14px;
+}
+
+.prod {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  animation-name: "zoom";
+  animation-duration: 2s;
+  position: relative;
+}
+.prod img {
+  width: 200px;
+  height: 200px;
+  border-radius: 7px;
+  animation-name: "zoom";
+  animation-duration: 2s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 157px;
+}
+.prod-title {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  animation-name: "delayed-appear";
+  animation-timing-function: ease-out;
+  animation-duration: 1.7s;
+}
+#prods-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+.prod button {
+  background-color: white;
+  margin: 0;
+  outline: none;
+  border: none;
+  z-index: 2;
+  padding: 14px;
+  border-radius: 70px;
+  text-align: center;
+  position: absolute;
+  cursor: pointer;
+  right: 78%;
+  bottom: 154px;
+  animation-name: "delayed-appear";
+  animation-timing-function: ease-out;
+  animation-duration: 1.7s;
+}
+.prod button:active {
+  background-color: #ebebeb;
+}
+.cart {
+  position: absolute;
+  top: 17px;
+  right: 30px;
+}
+.cart img {
+  transition: height 0.5s;
+  height: 40px;
+  cursor: pointer;
+}
+.cart img:hover {
+  height: 47px;
+}
+#cart-counter {
+  top: 0px;
+  position: absolute;
+  background-color: white;
+  padding: 4px;
+  border-radius: 40px;
+  right: 45px;
+}
+
+#cart-page {
+  background-color: #e6ddc4;
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 37px;
+}
+#go-back {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: font-size 0.4s;
+}
+#go-back:hover {
+  font-size: 21px;
+}
+#cart-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+@keyframes welcome-slide {
+  0% {
+    bottom: 1000px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes welcome-transition {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes backwards-fade {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes delayed-appear {
+  0% {
+    opacity: 0%;
+  }
+  90% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes zoom {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+  }
+}

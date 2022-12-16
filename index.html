@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>E-Commerce</title>
+  </head>
+  <body>
+    <div id="welcome-page">
+      <h1 class="welcome-h1" id="welcome-h1">Welcome!</h1>
+      <button class="start-button" id="start-button">Start to navegate</button>
+      <div class="transition" id="transition"></div>
+    </div>
+    <div id="navegation-page">
+      <h3 id="title">E-Commerce</h3>
+      <form id="form">
+        <input type="text" placeholder="Search" id="search-bar" />
+      </form>
+      <div id="prods-container">
+      </div>
+      <div class="cart">
+        <img src="img/cart.png" alt="shopping-cart" id="cart-img" draggable="false" />
+        <p id="cart-counter">0</p>
+      </div>
+    </div>
+    <div id="cart-page">
+      <h3>Your cart</h3>
+      <p id="go-back">Go Back</p>
+      <div id="cart-container"></div>
+    </div>
+    <script src="db/db.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
